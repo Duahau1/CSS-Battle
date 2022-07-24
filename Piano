@@ -1,0 +1,67 @@
+<div class ="base">
+  <div class="key-group">
+    <span class="key"></span>
+    <span class="key"></span>
+    <span class="key"></span>
+  </div>
+  
+  <div class="key-group">
+    <span class="key"></span>
+    <span class="key"></span>
+    <span class="key"></span>
+    <span class="key"></span>
+  </div>
+</div>
+<style>
+  *{
+    box-sizing:border-box;
+  }
+  body{
+    margin: 0;
+    background-color :#998235;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+ .base {
+    width: 180px;
+    height: 100px;
+    background: #191919;
+   	border-radius:10px;
+  	display:flex;
+  	padding:20px 4px 4px 4px;
+   gap:4px;
+  }
+  .key-group{
+    background-color:#191919;
+    display:flex;
+    height:100%;
+    gap:4px;
+	flex:1;
+  }
+  .key{
+    width:20px;
+    background-color:#ffffff;
+  	border-radius: 6px;
+  	flex:1;
+  position:relative;
+ 		
+  }
+  .key:not(:last-child):before{
+	content: '';
+    position:absolute;
+    width:15px;
+    height:50%;
+    background-color:#191919;
+    top:0;
+    left:15px;
+  }
+  .key:not(:first-child):after{
+	content: '';
+    position:absolute;
+    width:15px;
+    height:50%;
+    background-color:#191919;
+    top:0;
+    right:15px;
+  }
